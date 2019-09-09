@@ -33,7 +33,8 @@ img.forEach((pic) => {
         
           // Apply scale transform
           pic.style.transform = `scale(${scale})`;
-    }})
+    };
+});
 
 
 // Drag-Drop
@@ -49,10 +50,41 @@ function toText() {
     noHeadImg.style.justifyContent = 'center';
     const newHead = document.querySelector('.intro');
     newHead.prepend(noHeadImg);
-}
+};
 
 
+// Load
 
+// window.addEventListener('load', () => {
+//     alert('The bus is fueled up and ready to go!');
+// });
+
+
+// Focus
+
+// const myWindow = window.open("", "", "width=200, height=200");
+// myWindow.document.write("<p>Use a Pop-up blocker, Silly!</p>");
+// myWindow.focus();
+
+
+// Resize
+const hTwo = document.querySelectorAll('h2');
+
+
+hTwo.forEach((newStyle) => {
+    newStyle.style.backgroundColor = 'lightblue';
+    newStyle.style.paddingLeft = '4%';
+    newStyle.style.paddingTop = '2%';
+    newStyle.style.borderRadius = '4px';
+});
+
+// window.addEventListener('resize', newStyle);
+// hTwo.forEach(() => {
+// function newStyle() {
+//     hTwo.style.backgroundColor = 'lightblue';
+//     hTwo.style.paddingLeft = '4%';
+//     hTwo.style.paddingTop = '2%';
+//     hTwo.style.borderRadius = '4px'; 
+// }});
 
 // Scroll
-const container = document.getElementsByClassName(['container home']);

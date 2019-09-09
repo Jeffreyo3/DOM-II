@@ -1,9 +1,9 @@
 // Your code goes here
 
 // Mouseover
-const navi = document.querySelectorAll('nav a');
+const navA = document.querySelectorAll('nav a');
 
-navi.forEach((link) => {
+navA.forEach((link) => {
     link.addEventListener('mouseover', (event) => {
         event.target.style.transform = 'scale(1.5)';
         setTimeout(function () {
@@ -38,7 +38,6 @@ img.forEach((pic) => {
 
 
 // Drag-Drop
-
 const headerImg = document.querySelector('.intro img');
 headerImg.addEventListener('dragend', toText);
 function toText() {
@@ -80,3 +79,39 @@ hTwo.forEach((newStyle) => {
 });
 
 // Scroll
+const mainHead = document.querySelector('.main-navigation');
+const bottomContent = document.querySelectorAll('.destination');
+
+function navFadeOnScroll() {
+    document.body.style.backgroundImage = "url('./img/big-ben.jpg')";
+    mainHead.style.opacity = ".5";
+    bottomContent.forEach((bg) => {
+        bg.style.backgroundColor = 'white';
+        bg.style.opacity = '.8';
+        bg.style.padding = '2%';
+        bg.style.borderRadius = '5px';
+        bg.style.margin = '1%';
+        bg.style.fontWeight = 'bold';
+    });
+};
+
+document.addEventListener("scroll", navFadeOnScroll);
+
+// Click
+const logo = document.querySelector('.logo-heading');
+logo.addEventListener('click', () => console.log('You clicked me ^.^'));
+
+// DblClick
+
+logo.addEventListener('dblclick', () => {
+    window.setTimeout(() => {
+        window.location.reload(true);
+    }, 200);
+});
+
+
+
+// Stop Nav Items from default action
+navA.addEventListener('click', function (event) {
+    event.preventDefault()
+});

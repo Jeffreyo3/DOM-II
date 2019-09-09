@@ -70,21 +70,13 @@ function toText() {
 // Resize
 const hTwo = document.querySelectorAll('h2');
 
-
+window.addEventListener('resize', function(){
 hTwo.forEach((newStyle) => {
     newStyle.style.backgroundColor = 'lightblue';
     newStyle.style.paddingLeft = '4%';
     newStyle.style.paddingTop = '2%';
     newStyle.style.borderRadius = '4px';
 });
-
-// window.addEventListener('resize', newStyle);
-// hTwo.forEach(() => {
-// function newStyle() {
-//     hTwo.style.backgroundColor = 'lightblue';
-//     hTwo.style.paddingLeft = '4%';
-//     hTwo.style.paddingTop = '2%';
-//     hTwo.style.borderRadius = '4px'; 
-// }});
+});
 
 // Scroll

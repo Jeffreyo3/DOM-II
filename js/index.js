@@ -54,16 +54,16 @@ function toText() {
 
 // Load
 
-// window.addEventListener('load', () => {
-//     alert('The bus is fueled up and ready to go!');
-// });
+window.addEventListener('load', () => {
+    alert('The bus is fueled up and ready to go!');
+});
 
 
 // Focus
 
-// const myWindow = window.open("", "", "width=200, height=200");
-// myWindow.document.write("<p>Use a Pop-up blocker, Silly!</p>");
-// myWindow.focus();
+const myWindow = window.open("", "", "width=200, height=200");
+myWindow.document.write("<p>Use a Pop-up blocker, Silly!</p>");
+myWindow.focus();
 
 
 // Resize
@@ -110,8 +110,18 @@ logo.addEventListener('dblclick', () => {
 });
 
 
+// Stop Propogation
+
+const advAwaits = document.querySelector(".prop")
+
+advAwaits.addEventListener("click", (event)=>{
+    event.stopPropagation()
+    event.target.style.border = "2px solid black"
+})
+
 
 // Stop Nav Items from default action
-navA.addEventListener('click', function (event) {
+navA.forEach((navA) => {navA.addEventListener('click', function (event) {
     event.preventDefault()
+});
 });

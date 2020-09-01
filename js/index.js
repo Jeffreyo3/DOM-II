@@ -124,7 +124,6 @@ navA.forEach((navA) => {
   });
 });
 
-
 // Flip buttons around when wheeling over
 const destinationsBtn = document.querySelectorAll(".destination");
 destinationsBtn.forEach((el) => {
@@ -132,4 +131,18 @@ destinationsBtn.forEach((el) => {
     console.log(window.pageYOffset);
     event.target.style.transform = `rotate(${window.pageYOffset}deg)`;
   });
+});
+
+const intro = document.querySelector(".intro");
+let clicked = false;
+intro.addEventListener("dblclick", (e) => {
+  if (clicked === false) {
+    clicked = true;
+    e.target.style.color = "cyan";
+    e.target.style.backgroundColor = "black";
+  } else {
+    clicked = false;
+    e.target.style.color = "darkblue";
+    e.target.style.backgroundColor = "transparent";
+  }
 });

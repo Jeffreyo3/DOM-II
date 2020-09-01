@@ -133,6 +133,7 @@ destinationsBtn.forEach((el) => {
   });
 });
 
+// Toggle header styling
 const intro = document.querySelector(".intro");
 let clicked = false;
 intro.addEventListener("dblclick", (e) => {
